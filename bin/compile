@@ -20,10 +20,10 @@ shopt -s dotglob
 
 cd $BUILD_DIR
 
-# move app things to www
-mkdir -p $CACHE_DIR/www
-mv * $CACHE_DIR/www
-mv $CACHE_DIR/www .
+# don't move things to www as the index.php is expected to be under web/
+#mkdir -p $CACHE_DIR/www
+#mv * $CACHE_DIR/www
+#mv $CACHE_DIR/www .
 
 # keep Procfile
 if [ -f www/Procfile ]; then
