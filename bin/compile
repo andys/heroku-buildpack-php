@@ -20,7 +20,7 @@ shopt -s dotglob
 
 cd $BUILD_DIR
 
-if [ -f $CACHE_DIR/index.php ]; then
+if [ -f index.php ]; then
   mkdir -p $CACHE_DIR/web
   mv * $CACHE_DIR/web
   mv $CACHE_DIR/web .
