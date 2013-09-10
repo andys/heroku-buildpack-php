@@ -62,9 +62,6 @@ cat >>boot.sh <<EOF
 for var in \`env|cut -f1 -d=\`; do
   echo "PassEnv \$var" >> /app/apache/conf/httpd.conf;
 done
-rm /app/apache/logs/apache.log
-mkfifo -m 622 /app/apache/logs/apache.log
-tail -f /app/apache/logs/apache.log &
 export LD_LIBRARY_PATH=/app/php/lib/php
 export PHP_INI_SCAN_DIR=/app/www
 echo "Launching apache"
